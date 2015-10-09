@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151009044446) do
+ActiveRecord::Schema.define(version: 20151009044015) do
 
   create_table "drivers", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -124,11 +124,13 @@ ActiveRecord::Schema.define(version: 20151009044446) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip",     limit: 255
     t.string   "last_sign_in_ip",        limit: 255
+    t.integer  "profile_id",             limit: 4
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["profile_id"], name: "index_users_on_profile_id", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "vehicles", force: :cascade do |t|
@@ -152,6 +154,7 @@ ActiveRecord::Schema.define(version: 20151009044446) do
   add_foreign_key "reservations", "profiles"
   add_foreign_key "reservations", "services"
   add_foreign_key "reservations", "vehicles"
+  add_foreign_key "users", "profiles"
   add_foreign_key "vehicles", "drivers"
   add_foreign_key "vehicles", "services"
 end

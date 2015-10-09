@@ -2,7 +2,7 @@
 
 one:
   pickupdate: 2015-10-08
-  pickuptime: 2015-10-08 23:06:01
+  pickuptime: 2015-10-08 23:06:17
   origin: MyString
   destiny: MyString
   status: MyString
@@ -15,7 +15,7 @@ one:
 
 two:
   pickupdate: 2015-10-08
-  pickuptime: 2015-10-08 23:06:01
+  pickuptime: 2015-10-08 23:06:17
   origin: MyString
   destiny: MyString
   status: MyString
