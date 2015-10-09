@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  current: MyString
+  location1: MyString
+  location2: MyString
+  location3: MyString
+  location4: MyString
+  location5: MyString
+  vehicle_id: 
+
+two:
+  current: MyString
+  location1: MyString
+  location2: MyString
+  location3: MyString
+  location4: MyString
+  location5: MyString
+  vehicle_id: 

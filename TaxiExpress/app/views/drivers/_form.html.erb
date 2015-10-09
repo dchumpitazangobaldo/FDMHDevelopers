@@ -1,0 +1,28 @@
+<%= simple_form_for @driver, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :name %>
+  <%= error_span(@driver[:name]) %>
+  <%= f.input :lastname %>
+  <%= error_span(@driver[:lastname]) %>
+  <%= f.input :address %>
+  <%= error_span(@driver[:address]) %>
+  <%= f.input :dni %>
+  <%= error_span(@driver[:dni]) %>
+  <%= f.input :telephone %>
+  <%= error_span(@driver[:telephone]) %>
+  <%= f.input :cellphone %>
+  <%= error_span(@driver[:cellphone]) %>
+  <%= f.input :email %>
+  <%= error_span(@driver[:email]) %>
+  <%= f.input :status %>
+  <%= error_span(@driver[:status]) %>
+  <%= f.input :license %>
+  <%= error_span(@driver[:license]) %>
+  <%= f.input :startjob %>
+  <%= error_span(@driver[:startjob]) %>
+  <%= f.input :endjob %>
+  <%= error_span(@driver[:endjob]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                drivers_path, :class => 'btn btn-default' %>
+<% end %>
