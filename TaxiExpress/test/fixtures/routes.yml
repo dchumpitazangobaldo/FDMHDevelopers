@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  origin: MyString
+  destiny: MyString
+  price: 9.99
+  currency: MyString
+
+two:
+  origin: MyString
+  destiny: MyString
+  price: 9.99
+  currency: MyString

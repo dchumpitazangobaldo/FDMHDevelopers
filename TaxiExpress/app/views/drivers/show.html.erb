@@ -1,0 +1,39 @@
+<%- model_class = Driver -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @driver.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:lastname) %>:</strong></dt>
+  <dd><%= @driver.lastname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+  <dd><%= @driver.address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:dni) %>:</strong></dt>
+  <dd><%= @driver.dni %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:telephone) %>:</strong></dt>
+  <dd><%= @driver.telephone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cellphone) %>:</strong></dt>
+  <dd><%= @driver.cellphone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd><%= @driver.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
+  <dd><%= @driver.status %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:license) %>:</strong></dt>
+  <dd><%= @driver.license %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:startjob) %>:</strong></dt>
+  <dd><%= @driver.startjob %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:endjob) %>:</strong></dt>
+  <dd><%= @driver.endjob %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              drivers_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_driver_path(@driver), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              driver_path(@driver),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pickupdate: 2015-10-08
+  pickuptime: 2015-10-08 23:06:01
+  origin: MyString
+  destiny: MyString
+  status: MyString
+  npassengers: 1
+  price: 9.99
+  currency: MyString
+  profile_id: 
+  vehicle_id: 
+  service_id: 
+
+two:
+  pickupdate: 2015-10-08
+  pickuptime: 2015-10-08 23:06:01
+  origin: MyString
+  destiny: MyString
+  status: MyString
+  npassengers: 1
+  price: 9.99
+  currency: MyString
+  profile_id: 
+  vehicle_id: 
+  service_id: 

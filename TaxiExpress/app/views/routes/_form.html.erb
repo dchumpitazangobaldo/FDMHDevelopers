@@ -1,0 +1,14 @@
+<%= simple_form_for @route, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :origin %>
+  <%= error_span(@route[:origin]) %>
+  <%= f.input :destiny %>
+  <%= error_span(@route[:destiny]) %>
+  <%= f.input :price %>
+  <%= error_span(@route[:price]) %>
+  <%= f.input :currency %>
+  <%= error_span(@route[:currency]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                routes_path, :class => 'btn btn-default' %>
+<% end %>
