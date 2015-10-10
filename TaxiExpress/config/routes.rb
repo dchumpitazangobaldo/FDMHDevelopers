@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'signin/signIn'
+
+  get 'signup/signUp'
+
   get 'contact/contactUs'
 
   get 'crew/ourCrew'
@@ -8,6 +12,7 @@ Rails.application.routes.draw do
   
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
+  devise_for :admins
   resources :locations
   resources :reservations
   resources :vehicles

@@ -10,14 +10,8 @@
       <th><%= model_class.human_attribute_name(:lastname) %></th>
       <th><%= model_class.human_attribute_name(:address) %></th>
       <th><%= model_class.human_attribute_name(:dni) %></th>
-      <th><%= model_class.human_attribute_name(:telephone) %></th>
       <th><%= model_class.human_attribute_name(:cellphone) %></th>
-      <th><%= model_class.human_attribute_name(:email) %></th>
       <th><%= model_class.human_attribute_name(:status) %></th>
-      <th><%= model_class.human_attribute_name(:license) %></th>
-      <th><%= model_class.human_attribute_name(:startjob) %></th>
-      <th><%= model_class.human_attribute_name(:endjob) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -29,14 +23,8 @@
         <td><%= driver.lastname %></td>
         <td><%= driver.address %></td>
         <td><%= driver.dni %></td>
-        <td><%= driver.telephone %></td>
         <td><%= driver.cellphone %></td>
-        <td><%= driver.email %></td>
         <td><%= driver.status %></td>
-        <td><%= driver.license %></td>
-        <td><%= driver.startjob %></td>
-        <td><%= driver.endjob %></td>
-        <td><%=l driver.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_driver_path(driver), :class => 'btn btn-default btn-xs' %>

@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:tipo) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:lastname) %></th>
       <th><%= model_class.human_attribute_name(:address) %></th>
@@ -21,6 +22,7 @@
     <% @profiles.each do |profile| %>
       <tr>
         <td><%= link_to profile.id, profile_path(profile) %></td>
+        <td><%= profile.tipo %></td>
         <td><%= profile.name %></td>
         <td><%= profile.lastname %></td>
         <td><%= profile.address %></td>

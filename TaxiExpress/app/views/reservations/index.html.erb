@@ -11,13 +11,8 @@
       <th><%= model_class.human_attribute_name(:origin) %></th>
       <th><%= model_class.human_attribute_name(:destiny) %></th>
       <th><%= model_class.human_attribute_name(:status) %></th>
-      <th><%= model_class.human_attribute_name(:npassengers) %></th>
-      <th><%= model_class.human_attribute_name(:price) %></th>
-      <th><%= model_class.human_attribute_name(:currency) %></th>
-      <th><%= model_class.human_attribute_name(:profile_id) %></th>
       <th><%= model_class.human_attribute_name(:vehicle_id) %></th>
       <th><%= model_class.human_attribute_name(:service_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -30,13 +25,8 @@
         <td><%= reservation.origin %></td>
         <td><%= reservation.destiny %></td>
         <td><%= reservation.status %></td>
-        <td><%= reservation.npassengers %></td>
-        <td><%= reservation.price %></td>
-        <td><%= reservation.currency %></td>
-        <td><%= reservation.profile_id %></td>
         <td><%= reservation.vehicle_id %></td>
         <td><%= reservation.service_id %></td>
-        <td><%=l reservation.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_reservation_path(reservation), :class => 'btn btn-default btn-xs' %>
