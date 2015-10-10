@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+.nav-bar-xpress{
+    margin-bottom: 0px;
+    background-color: #000000;
+}
+.img-ancho{
+    width:100%;
+}
