@@ -20,3 +20,14 @@
 .img-ancho{
     width:100%;
 }
+.f-black{
+    background-color:#000000;
+    color:#ffffff;
+    padding:20px;
+}
+.p-home{
+    line-height:20px;
+}
+a{
+    color:#ffffff;
+}
