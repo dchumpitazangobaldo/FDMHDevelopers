@@ -4,7 +4,9 @@ class VehiclesController < ApplicationController
   # GET /vehicles
   # GET /vehicles.json
   def index
+    #@service = Service.find(params[:service_id])
     @vehicles = Vehicle.all
+    #@vehicles = @service.vehicles
   end
 
   # GET /vehicles/1
@@ -14,7 +16,9 @@ class VehiclesController < ApplicationController
 
   # GET /vehicles/new
   def new
+    #@service = Service.find(params[:service_id])
     @vehicle = Vehicle.new
+    #@vehicle = @service.vehicle.new 
   end
 
   # GET /vehicles/1/edit
@@ -64,6 +68,7 @@ class VehiclesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_vehicle
+      #@service = Service.find(params[:service_id])
       @vehicle = Vehicle.find(params[:id])
     end
 

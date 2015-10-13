@@ -6,7 +6,7 @@ class CreateReservations < ActiveRecord::Migration
       t.string :origin
       t.string :destiny
       t.string :status
-      t.integer :npassengers
+      t.integer :npassengers as "Number of Passengers"
       t.decimal :price
       t.string :currency
       t.references :profile, index: true, foreign_key: true

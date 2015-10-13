@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20151010201226) do
     t.string   "origin",      limit: 255
     t.string   "destiny",     limit: 255
     t.string   "status",      limit: 255
-    t.integer  "npassengers", limit: 4
+    t.integer  "npassengers", limit: 4    
     t.decimal  "price",                   precision: 10
     t.string   "currency",    limit: 255
     t.integer  "profile_id",  limit: 4

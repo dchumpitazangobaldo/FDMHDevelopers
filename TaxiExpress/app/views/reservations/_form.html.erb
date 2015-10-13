@@ -1,4 +1,4 @@
-<%= simple_form_for @reservation, :html => { :class => 'form-horizontal' } do |f| %>
+<%= simple_form_for [@service, @reservation], :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :pickupdate %>
   <%= error_span(@reservation[:pickupdate]) %>
   <%= f.input :pickuptime %>
@@ -7,22 +7,23 @@
   <%= error_span(@reservation[:origin]) %>
   <%= f.input :destiny %>
   <%= error_span(@reservation[:destiny]) %>
-  <%= f.input :status %>
+  <%= f.input :status, :as => :hidden, :input_html => { :value => 'ACT' } %>
   <%= error_span(@reservation[:status]) %>
-  <%= f.input :npassengers %>
+  <%= f.input :npassengers, :label => "Number of Passengers", :placeholder =>   "" %>
   <%= error_span(@reservation[:npassengers]) %>
   <%= f.input :price %>
   <%= error_span(@reservation[:price]) %>
   <%= f.input :currency %>
   <%= error_span(@reservation[:currency]) %>
-  <%= f.input :profile_id %>
+  <%= f.association :profile %>
   <%= error_span(@reservation[:profile_id]) %>
-  <%= f.input :vehicle_id %>
+  <%= f.association :vehicle %>
   <%= error_span(@reservation[:vehicle_id]) %>
-  <%= f.input :service_id %>
+  <%= f.association :service %>
   <%= error_span(@reservation[:service_id]) %>
+
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                reservations_path, :class => 'btn btn-default' %>
+                reservations_path(@profile, @vehicle, @service), :class => 'btn btn-default' %>
 <% end %>

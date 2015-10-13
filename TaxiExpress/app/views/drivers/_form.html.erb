@@ -5,7 +5,7 @@
   <%= error_span(@driver[:lastname]) %>
   <%= f.input :address %>
   <%= error_span(@driver[:address]) %>
-  <%= f.input :dni %>
+  <%= f.input :dni, :label => "DNI" %>
   <%= error_span(@driver[:dni]) %>
   <%= f.input :telephone %>
   <%= error_span(@driver[:telephone]) %>
@@ -13,7 +13,7 @@
   <%= error_span(@driver[:cellphone]) %>
   <%= f.input :email %>
   <%= error_span(@driver[:email]) %>
-  <%= f.input :status %>
+  <%= f.input :status, :as => :hidden, :input_html => { :value => 'ACT' } %>
   <%= error_span(@driver[:status]) %>
   <%= f.input :license %>
   <%= error_span(@driver[:license]) %>

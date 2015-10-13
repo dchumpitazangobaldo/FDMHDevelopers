@@ -4,7 +4,9 @@ class ReservationsController < ApplicationController
   # GET /reservations
   # GET /reservations.json
   def index
+    #@service = Service.find(params[:service_id])
     @reservations = Reservation.all
+    #@reservations = @service.reservations
   end
 
   # GET /reservations/1
@@ -14,7 +16,9 @@ class ReservationsController < ApplicationController
 
   # GET /reservations/new
   def new
+    #@service = Service.find(params[:service_id])
     @reservation = Reservation.new
+    #@reservation = @service.reservations.new 
   end
 
   # GET /reservations/1/edit
@@ -64,6 +68,7 @@ class ReservationsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_reservation
+      #@service = Service.find(params[:service_id])
       @reservation = Reservation.find(params[:id])
     end
 

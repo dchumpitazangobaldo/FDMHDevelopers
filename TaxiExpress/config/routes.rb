@@ -11,11 +11,20 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :locations
   resources :reservations
-  resources :vehicles
+  resources :vehicles do
+    resources :reservations
+  end
   resources :routes
-  resources :services
-  resources :drivers
-  resources :profiles
+  resources :services do
+    resources :reservations
+    resources :vehicles
+  end
+  resources :drivers do
+    resources :vehicles
+  end
+  resources :profiles do
+    resources :reservations
+  end
   #get 'home/index'
   root 'home#index'
 

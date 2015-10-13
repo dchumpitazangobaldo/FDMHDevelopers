@@ -9,16 +9,16 @@
   <%= error_span(@vehicle[:color]) %>
   <%= f.input :air %>
   <%= error_span(@vehicle[:air]) %>
-  <%= f.input :status %>
+  <%= f.input :status, :as => :hidden, :input_html => { :value => 'ACT' } %>
   <%= error_span(@vehicle[:status]) %>
   <%= f.input :passengers %>
   <%= error_span(@vehicle[:passengers]) %>
-  <%= f.input :driver_id %>
+  <%= f.association :driver %>
   <%= error_span(@vehicle[:driver_id]) %>
-  <%= f.input :service_id %>
+  <%= f.association :service %>
   <%= error_span(@vehicle[:service_id]) %>
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                vehicles_path, :class => 'btn btn-default' %>
+                vehicles_path(@driver, @service), :class => 'btn btn-default' %>
 <% end %>
